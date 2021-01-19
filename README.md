@@ -23,7 +23,7 @@ src
           ㄴ ResponseInfo.kt
         ㄴ response
           ㄴ ScreenResponse.kt
-        ㄴ Config.kt
+        ㄴ Config.kt // ComponentResolver 목록 Bean 생성하는데
         ㄴ Controller.kt
         ㄴ DemoApplication.kt
 ```
