@@ -15,7 +15,7 @@ class Controller(
 ) {
     @GetMapping("/test")
     fun test(): ScreenResponse {
-        val components = listOf(Pair("hello", "1.0"), Pair("text_banner", "1.0"), Pair("none", "1.0"))
+        val components = listOf(Pair("forbidden", "1.0"), Pair("text_banner", "1.0"), Pair("none", "1.0"))
         val resolvedComponents = components.map { component ->
             val name = component.first
             val version = component.second

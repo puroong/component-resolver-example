@@ -2,7 +2,7 @@ package com.example.demo.component.resolver
 
 import com.example.demo.component.result.ComponentResult
 
-abstract class ComponentResolver<R: ComponentResult> {
+abstract class ComponentResolver<R: ComponentResult<out Any>> {
     abstract val name: String
     abstract val version: String
 
