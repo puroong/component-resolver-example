@@ -1,10 +1,9 @@
-package com.example.demo.component.data
+package com.example.demo.component.result
 
 import com.example.demo.dto.ResponseInfo
-import java.util.*
 
-class EmptyData(
+class EmptyResult(
     override val response: ResponseInfo
-) : ComponentData() {
+) : ComponentResult<Any>() {
     override val data: Any = Any()
 }

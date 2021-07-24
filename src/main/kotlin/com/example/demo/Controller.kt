@@ -1,7 +1,7 @@
 package com.example.demo
 
-import com.example.demo.component.data.ComponentData
-import com.example.demo.component.data.EmptyData
+import com.example.demo.component.result.ComponentResult
+import com.example.demo.component.result.EmptyResult
 import com.example.demo.component.resolver.ComponentResolver
 import com.example.demo.dto.ResolvedComponentInfo
 import com.example.demo.dto.ResponseInfo
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class Controller(
-    private val componentResolvers: List<ComponentResolver<out ComponentData>>
+    private val componentResolvers: List<ComponentResolver<out ComponentResult<out Any>>>
 ) {
     @GetMapping("/test")
     fun test(): ScreenResponse {
@@ -22,7 +22,7 @@ class Controller(
 
             val resolver = componentResolvers.find { it.match(name, version) }
 
-            val componentData = resolver?.let { resolver.resolve() } ?: run { EmptyData(ResponseInfo(500, "no resolver found")) }
+            val componentData = resolver?.let { resolver.resolve() } ?: run { EmptyResult(ResponseInfo(500, "no resolver found")) }
             ResolvedComponentInfo(name, version, componentData)
         }
 

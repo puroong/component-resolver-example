@@ -1,10 +1,10 @@
 package com.example.demo.dto
 
-import com.example.demo.component.data.ComponentData
+import com.example.demo.component.result.ComponentResult
 import com.fasterxml.jackson.annotation.JsonUnwrapped
 
 class ResolvedComponentInfo(
     val name: String,
     val version: String,
-    @JsonUnwrapped val componentData: ComponentData
+    @JsonUnwrapped val componentResult: ComponentResult<out Any>
 )

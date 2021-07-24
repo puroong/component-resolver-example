@@ -1,8 +1,8 @@
 package com.example.demo.component.resolver
 
-import com.example.demo.component.data.ComponentData
+import com.example.demo.component.result.ComponentResult
 
-abstract class ComponentResolver<R: ComponentData> {
+abstract class ComponentResolver<R: ComponentResult> {
     abstract val name: String
     abstract val version: String
 
