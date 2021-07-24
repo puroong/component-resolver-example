@@ -1,7 +1,9 @@
 package com.example.demo.component.resolver
 
 import com.example.demo.component.result.ComponentResult
+import org.springframework.stereotype.Component
 
+@Component
 abstract class ComponentResolver<R: ComponentResult<out Any>> {
     abstract val name: String
     abstract val version: String
