@@ -1,6 +1,6 @@
 package com.example.demo.component.result
 
-import com.example.demo.dto.HelloDto
+import com.example.demo.model.HelloDto
 import com.example.demo.component.response.HttpResponse
 
 class HelloComponentResult(

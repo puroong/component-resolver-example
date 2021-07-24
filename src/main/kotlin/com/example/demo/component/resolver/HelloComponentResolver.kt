@@ -1,7 +1,7 @@
 package com.example.demo.component.resolver
 
 import com.example.demo.component.result.HelloComponentResult
-import com.example.demo.dto.HelloDto
+import com.example.demo.model.HelloDto
 import com.example.demo.component.response.HttpResponse
 
 class HelloComponentResolver : ComponentResolver<HelloComponentResult>() {
