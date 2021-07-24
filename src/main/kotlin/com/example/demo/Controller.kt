@@ -3,7 +3,7 @@ package com.example.demo
 import com.example.demo.component.result.ComponentResult
 import com.example.demo.component.result.EmptyResult
 import com.example.demo.component.resolver.ComponentResolver
-import com.example.demo.dto.ResolvedComponentInfo
+import com.example.demo.component.response.ComponentResponse
 import com.example.demo.dto.ResponseInfo
 import com.example.demo.response.ScreenResponse
 import org.springframework.web.bind.annotation.GetMapping
@@ -23,7 +23,7 @@ class Controller(
             val resolver = componentResolvers.find { it.match(name, version) }
 
             val componentData = resolver?.let { resolver.resolve() } ?: run { EmptyResult(ResponseInfo(500, "no resolver found")) }
-            ResolvedComponentInfo(name, version, componentData)
+            ComponentResponse(name, version, componentData)
         }
 
         return ScreenResponse(resolvedComponents)

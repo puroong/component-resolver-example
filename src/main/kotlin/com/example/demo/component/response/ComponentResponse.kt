@@ -1,9 +1,9 @@
-package com.example.demo.dto
+package com.example.demo.component.response
 
 import com.example.demo.component.result.ComponentResult
 import com.fasterxml.jackson.annotation.JsonUnwrapped
 
-class ResolvedComponentInfo(
+class ComponentResponse(
     val name: String,
     val version: String,
     @JsonUnwrapped val componentResult: ComponentResult<out Any>

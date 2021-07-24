@@ -1,7 +1,7 @@
 package com.example.demo.response
 
-import com.example.demo.dto.ResolvedComponentInfo
+import com.example.demo.component.response.ComponentResponse
 
 class ScreenResponse(
-    val components: List<ResolvedComponentInfo>
+    val components: List<ComponentResponse>
 )
