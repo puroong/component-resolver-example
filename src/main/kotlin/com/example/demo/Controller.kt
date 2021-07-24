@@ -6,6 +6,7 @@ import com.example.demo.component.resolver.ComponentResolver
 import com.example.demo.component.response.ComponentResponse
 import com.example.demo.component.response.HttpResponse
 import com.example.demo.response.ScreenResponse
+import com.example.demo.vo.Version
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
@@ -15,7 +16,7 @@ class Controller(
 ) {
     @GetMapping("/test")
     fun test(): ScreenResponse {
-        val components = listOf(Pair("forbidden", "1.0"), Pair("text_banner", "1.0"), Pair("none", "1.0"))
+        val components = listOf(Pair("forbidden", Version(1, 0)), Pair("text_banner", Version(1, 0)), Pair("none", Version(1, 0)))
         val resolvedComponents = components.map { component ->
             val name = component.first
             val version = component.second
