@@ -1,9 +1,9 @@
 package com.example.demo.component.result
 
 import com.example.demo.dto.HelloDto
-import com.example.demo.dto.ResponseInfo
+import com.example.demo.component.response.HttpResponse
 
 class HelloComponentResult(
     override val data: HelloDto,
-    override val response: ResponseInfo
+    override val httpResponse: HttpResponse
 ) : ComponentResult<HelloDto>()

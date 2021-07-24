@@ -2,7 +2,7 @@ package com.example.demo.component.resolver
 
 import com.example.demo.component.result.HelloComponentResult
 import com.example.demo.dto.HelloDto
-import com.example.demo.dto.ResponseInfo
+import com.example.demo.component.response.HttpResponse
 
 class HelloComponentResolver : ComponentResolver<HelloComponentResult>() {
     override val name = "hello"
@@ -10,6 +10,6 @@ class HelloComponentResolver : ComponentResolver<HelloComponentResult>() {
 
     override fun resolve(): HelloComponentResult {
         val helloDto = HelloDto("hello", "message")
-        return HelloComponentResult(helloDto, ResponseInfo(200, "success"))
+        return HelloComponentResult(helloDto, HttpResponse(200, "success"))
     }
 }
